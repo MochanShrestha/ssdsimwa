@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{936F8584-7629-45D8-AD02-517419B763BB}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>SSDSimWA</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\Mochan\Documents\codeprojects\ssdsimwa\inc;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Mochan\Documents\codeprojects\ssdsimwa\dlib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Users\Mochan\Documents\codeprojects\ssdsimwa\inc;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Mochan\Documents\codeprojects\ssdsimwa\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <Profile>true</Profile>
+      <AdditionalDependencies>libboard.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\custom\Documents\projects\SSDSimWA\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <Profile>true</Profile>
+      <AdditionalLibraryDirectories>C:\Users\custom\Documents\projects\SSDSimWA\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>LibBoard.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="2RegionLayoutManager.cpp" />
+    <ClCompile Include="Address.cpp" />
+    <ClCompile Include="Block.cpp" />
+    <ClCompile Include="Cache.cpp" />
+    <ClCompile Include="CBRules.cpp" />
+    <ClCompile Include="cfgparser.cc" />
+    <ClCompile Include="CopybackBlocksLayoutManager.cpp" />
+    <ClCompile Include="CopybackLayoutManager.cpp" />
+    <ClCompile Include="cQueue.cpp" />
+    <ClCompile Include="DatTraceWorkload.cpp" />
+    <ClCompile Include="ETTILayoutManager.cpp" />
+    <ClCompile Include="Event.cpp" />
+    <ClCompile Include="Flash.cpp" />
+    <ClCompile Include="FlashMap.cpp" />
+    <ClCompile Include="FreePoolGarbageCollector.cpp" />
+    <ClCompile Include="FTL.cpp" />
+    <ClCompile Include="GarbageCollector.cpp" />
+    <ClCompile Include="GCScoreGarbageCollector.cpp" />
+    <ClCompile Include="HashData.cpp" />
+    <ClCompile Include="InPlaceGarbageCollector.cpp" />
+    <ClCompile Include="IntervalLayoutManager.cpp" />
+    <ClCompile Include="LayoutManager.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MappingTable.cpp" />
+    <ClCompile Include="Page.cpp" />
+    <ClCompile Include="SimParameters.cpp" />
+    <ClCompile Include="SingleWriteBlockLayoutManager.cpp" />
+    <ClCompile Include="SingleWriteLM.cpp" />
+    <ClCompile Include="SortedPoolGarbageCollector.cpp" />
+    <ClCompile Include="SSDSim.cpp" />
+    <ClCompile Include="Stat.cpp" />
+    <ClCompile Include="StateManager.cpp" />
+    <ClCompile Include="StreamStat.cpp" />
+    <ClCompile Include="SynthWorkload.cpp" />
+    <ClCompile Include="TRACE12Workload.cpp" />
+    <ClCompile Include="TRACE3Workload.cpp" />
+    <ClCompile Include="TraceWorkload.cpp" />
+    <ClCompile Include="UnifRandWorkload.cpp" />
+    <ClCompile Include="VolatilityCalc.cpp" />
+    <ClCompile Include="workload.cpp" />
+    <ClCompile Include="WriteBlocks.cpp" />
+    <ClCompile Include="WriteLayoutManager.cpp" />
+    <ClCompile Include="WriteStampLayoutManager.cpp" />
+    <ClCompile Include="WSingleWriteBlockLayoutManager.cpp" />
+    <ClCompile Include="ZipfWorkload.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="2RegionLayoutManager.h" />
+    <ClInclude Include="Address.h" />
+    <ClInclude Include="Block.h" />
+    <ClInclude Include="Cache.h" />
+    <ClInclude Include="CBRules.h" />
+    <ClInclude Include="cfgparser.h" />
+    <ClInclude Include="CopybackBlocksLayoutManager.h" />
+    <ClInclude Include="CopybackLayoutManager.h" />
+    <ClInclude Include="cQueue.h" />
+    <ClInclude Include="DatTraceWorkload.h" />
+    <ClInclude Include="ETTILayoutManager.h" />
+    <ClInclude Include="Event.h" />
+    <ClInclude Include="Flash.h" />
+    <ClInclude Include="FlashMap.h" />
+    <ClInclude Include="FreePoolGarbageCollector.h" />
+    <ClInclude Include="FTL.h" />
+    <ClInclude Include="GarbageCollector.h" />
+    <ClInclude Include="GCScoreGarbageCollector.h" />
+    <ClInclude Include="HashData.h" />
+    <ClInclude Include="InPlaceGarbageCollector.h" />
+    <ClInclude Include="IntervalLayoutManager.h" />
+    <ClInclude Include="LayoutManager.h" />
+    <ClInclude Include="MappingTable.h" />
+    <ClInclude Include="Page.h" />
+    <ClInclude Include="SimParameters.h" />
+    <ClInclude Include="SingleWriteBlockLayoutManager.h" />
+    <ClInclude Include="SingleWriteLM.h" />
+    <ClInclude Include="SortedPoolGarbageCollector.h" />
+    <ClInclude Include="SSDSim.h" />
+    <ClInclude Include="Stat.h" />
+    <ClInclude Include="StateManager.h" />
+    <ClInclude Include="StreamStat.h" />
+    <ClInclude Include="SynthWorkload.h" />
+    <ClInclude Include="TRACE12Workload.h" />
+    <ClInclude Include="TRACE3Workload.h" />
+    <ClInclude Include="TraceWorkload.h" />
+    <ClInclude Include="UnifRandWorkload.h" />
+    <ClInclude Include="VolatilityCalc.h" />
+    <ClInclude Include="workload.h" />
+    <ClInclude Include="WriteBlocks.h" />
+    <ClInclude Include="WriteLayoutManager.h" />
+    <ClInclude Include="WriteStampLayoutManager.h" />
+    <ClInclude Include="WSingleWriteBlockLayoutManager.h" />
+    <ClInclude Include="ZipfWorkload.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="overp10b.cfg" />
+    <None Include="sim.cfg" />
+    <None Include="sim2.cfg" />
+    <None Include="sim3.cfg" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
