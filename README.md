@@ -1,4 +1,4 @@
 SSDSim
 ======
 
-SSD Simulator
+SSD Simulator for Write Amplification and Wear Leveling
